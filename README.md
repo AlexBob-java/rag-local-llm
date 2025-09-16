@@ -50,10 +50,10 @@ The project had 3 goals:
    - Each chunk (semantic + full-class) is embedded using `BAAI/bge-large-en-v1.5`.  
    - Embeddings are stored in **FAISS** for efficient vector search.  
 
-3. **Query Flow (DeepSeek-Coder 6.7B again)**  
+3. **Query Flow (DeepSeek-Coder 6.7B or Llama3.1:8b)**  
    - User asks a question in the chat.  
    - **Retriever** finds top-k relevant chunks and their metadata.  
-   - **DeepSeek-Coder 6.7B** takes these chunks, applies a custom prompt, and generates a natural language answer.  
+   - **LLM** takes these chunks, applies a custom prompt, and generates a natural language answer.  
 
 4. **UI**  
    - Clean chat interface with history.  
