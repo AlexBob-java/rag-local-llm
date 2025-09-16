@@ -110,7 +110,7 @@ macOS:
    brew install ollama
    ```
 Linux: follow instructions from the website <br>
-Windows: download and install the .msi package
+Windows: download and install the `.msi` package
 Start the Ollama service:
    ```bash
    ollama serve
@@ -135,11 +135,11 @@ Inside the virtual environment, install the required packages:
    pip install torch --index-url https://download.pytorch.org/whl/cu126
    ```
 ## 4. Prepare Your Codebase
-Place your Java/Kotlin files into a folder, for example:
+Place your `Java/Kotlin` files into a folder, for example:
    ```bash
    ./codebase_small/
    ```
-This folder will be processed by build_rag.py to create semantic chunks.
+This folder will be processed by `build_rag_run.py` to create semantic chunks.
 
 ## 5. Build the RAG Index
 Run the index builder script:
@@ -148,8 +148,8 @@ Run the index builder script:
    ```
 This will:
 * Split your code into semantic chunks (JSON or plain text)
-* Save them in ./chunks_semantic/
-* Build a FAISS vector index in ./faiss_index_semantic/
+* Save them in `./chunks_semantic/`
+* Build a FAISS vector index in `./faiss_index_semantic/`
 ## 6. Launch the Web App
 Run the Gradio chatbot interface:
    ```bash
