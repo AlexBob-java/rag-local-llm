@@ -69,7 +69,9 @@ Q: Where is payment validation implemented?
 A: In PaymentValidator.java, inside the validatePayment() method.  
    It checks for null card data, expiration date, and compares the amount 
    with the user’s order total.
+```
 
+```text
 Q: Can you generate a unit test for CartService?  
 A: Sure. Here’s a JUnit5 test using Mockito:
 
