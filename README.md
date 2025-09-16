@@ -73,3 +73,75 @@ void testAddItemToCart() {
 
     assertEquals(1, cartService.getItems("user123").size());
 }
+```
+# 🔧 Prerequisites & Setup Guide
+
+This project demonstrates a **RAG (Retrieval-Augmented Generation)** pipeline with Ollama, FAISS, LangChain, and Gradio for interactive codebase Q&A.
+
+---
+
+## 1. Install Python and Virtual Environment
+1. Make sure you have **Python 3.10+** installed:
+   ```bash
+   python3 --version
+2. Create a virtual environment:
+   ```bash
+   python3 -m venv rag_env
+   source rag_env/bin/activate   # Linux / macOS
+   rag_env\Scripts\activate      # Windows
+
+## 2. Install Ollama
+1. Download and install Ollama: https://ollama.ai
+
+macOS:
+   ```bash
+   brew install ollama
+   ```
+Linux: follow instructions from the website <br>
+Windows: download and install the .msi package
+Start the Ollama service:
+   ```bash
+   ollama serve
+   ```
+
+Pull the required models:
+   ```bash
+   ollama pull deepseek-coder:6.7b
+   ollama pull llama3.1:8b
+   ```
+## 3. Install Python Dependencies
+Inside the virtual environment, install the required packages:
+   ```bash
+   pip install torch --extra-index-url https://download.pytorch.org/whl/cpu
+   pip install gradio
+   pip install langchain langchain-community langchain-huggingface langchain-ollama
+   pip install faiss-cpu
+   pip install json5 tqdm
+   ```
+👉 If you have a GPU, install the CUDA version of PyTorch instead:
+   ```bash
+   pip install torch --index-url https://download.pytorch.org/whl/cu126
+   ```
+## 4. Prepare Your Codebase
+Place your Java/Kotlin files into a folder, for example:
+   ```bash
+   ./codebase_small/
+   ```
+This folder will be processed by build_rag.py to create semantic chunks.
+
+## 5. Build the RAG Index
+Run the index builder script:
+   ```bash
+   python build_rag_run.py
+   ```
+This will:
+* Split your code into semantic chunks (JSON or plain text)
+* Save them in ./chunks_semantic/
+* Build a FAISS vector index in ./faiss_index_semantic/
+## 6. Launch the Web App
+Run the Gradio chatbot interface:
+   ```bash
+   python web_rag2.py
+   ```
+Then open http://localhost:7860
+ in your browser and start asking questions about your codebase 🎉
