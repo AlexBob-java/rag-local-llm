@@ -1,0 +1,6 @@
+{
+  "name": "ServerlessScope",
+  "type": "class_full",
+  "content": "/*\n * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one\n * or more contributor license agreements. Licensed under the \"Elastic License\n * 2.0\", the \"GNU Affero General Public License v3.0 only\", and the \"Server Side\n * Public License v 1\"; you may not use this file except in compliance with, at\n * your election, the \"Elastic License 2.0\", the \"GNU Affero General Public\n * License v3.0 only\", or the \"Server Side Public License, v 1\".\n */\n\npackage org.elasticsearch.rest;\n\nimport java.lang.annotation.ElementType;\nimport java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\nimport java.lang.annotation.Target;\n\n/**\n * This annotation is meant to be applied to RestHandler classes, and is used to determine which RestHandlers are available to requests\n * at runtime in Serverless mode. This annotation is unused when not running in serverless mode. If this annotation is not present in a\n * RestHandler, then that RestHandler is not available at all in Serverless mode.\n */\n@Retention(RetentionPolicy.RUNTIME)\n@Target(ElementType.TYPE)\npublic @interface ServerlessScope {\n    Scope value();\n}\n",
+  "file_path": "./codebase_small/server/src/main/java/org/elasticsearch/rest/ServerlessScope.java"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "ApiNotAvailableException",
+    "type": "class",
+    "content": "public class ApiNotAvailableException extends ElasticsearchException {",
+    "file_path": ""
+  },
+  {
+    "name": "__init__",
+    "type": "function",
+    "content": "public ApiNotAvailableException(String msg, Object... args) {\n        super(msg, args);\n     }",
+    "file_path": ""
+  },
+  {
+    "name": "__init__",
+    "type": "function",
+    "content": "public ApiNotAvailableException(StreamInput in) throws IOException {\n        super(in);\n     }",
+    "file_path": ""
+  },
+  {
+    "name": "status",
+    "type": "function",
+    "content": "@Override\n    public RestStatus status() {\n        return GONE;\n     }",
+    "file_path": ""
+  },
+  {
+    "name": "GONE",
+    "type": "config",
+    "content": "RestStatus GONE = RestStatus.GONE;",
+    "file_path": ""
+  }
+]

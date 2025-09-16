@@ -1,0 +1,20 @@
+[
+  {
+    "name": "RestRequestFilter",
+    "type": "class",
+    "content": "public interface RestRequestFilter {\n\n     /**\n      * Wraps the RestRequest and returns a version that provides the filtered content\n      */\n    default RestRequest getFilteredRequest(RestRequest restRequest) {...}\n\n     /**\n      * The list of fields that should be filtered. This can be a dot separated pattern to match sub objects and also supports wildcards\n      */\n    Set<String> getFilteredFields();\n}",
+    "file_path": ""
+  },
+  {
+    "name": "getFilteredRequest",
+    "type": "function",
+    "content": "\n    default RestRequest getFilteredRequest(RestRequest restRequest) {\n        Set<String> fields = getFilteredFields();\n        if (restRequest.hasContent() && fields.isEmpty() == false) {\n            return new RestRequest(restRequest) {...}\n        } else {\n            return restRequest;\n        }\n    }",
+    "file_path": ""
+  },
+  {
+    "name": "getFilteredFields",
+    "type": "function",
+    "content": "\n    Set<String> getFilteredFields();\n}",
+    "file_path": ""
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {
+    "name": "RestInterceptor",
+    "type": "functional interface",
+    "content": "@FunctionalInterface\npublic interface RestInterceptor {\n     void intercept(RestRequest request, RestChannel channel, RestHandler targetHandler, ActionListener<Boolean> listener) throws Exception;\n}",
+    "file_path": ""
+  }
+]

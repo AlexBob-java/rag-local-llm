@@ -1,0 +1,74 @@
+[
+  {
+    "name": "RestHandler",
+    "type": "class",
+    "content": "@FunctionalInterface\npublic interface RestHandler {",
+    "file_path": ""
+  },
+  {
+    "name": "handleRequest",
+    "type": "function",
+    "content": "void handleRequest(RestRequest request, RestChannel channel, NodeClient client) throws Exception;",
+    "file_path": ""
+  },
+  {
+    "name": "canTripCircuitBreaker",
+    "type": "function",
+    "content": "default boolean canTripCircuitBreaker() {\nreturn true;\n}",
+    "file_path": ""
+  },
+  {
+    "name": "supportsContentStream",
+    "type": "function",
+    "content": "default boolean supportsContentStream() {\nreturn false;\n}",
+    "file_path": ""
+  },
+  {
+    "name": "supportsBulkContent",
+    "type": "function",
+    "content": "default boolean supportsBulkContent() {\nreturn false;\n}",
+    "file_path": ""
+  },
+  {
+    "name": "getConcreteRestHandler",
+    "type": "function",
+    "content": "default RestHandler getConcreteRestHandler() {\nreturn this;\n}",
+    "file_path": ""
+  },
+  {
+    "name": "getServerlessScope",
+    "type": "function",
+    "content": "default Scope getServerlessScope() {\nServerlessScope serverlessScope = getConcreteRestHandler().getClass().getAnnotation(ServerlessScope.class);\nreturn serverlessScope == null ? null : serverlessScope.value();\n}",
+    "file_path": ""
+  },
+  {
+    "name": "routes",
+    "type": "function",
+    "content": "default List<Route> routes() {\nreturn Collections.emptyList();\n}",
+    "file_path": ""
+  },
+  {
+    "name": "allSupportedParameters",
+    "type": "function",
+    "content": "default @Nullable Set<String> allSupportedParameters() {\nreturn supportedQueryParameters();\n}",
+    "file_path": ""
+  },
+  {
+    "name": "supportedQueryParameters",
+    "type": "function",
+    "content": "default @Nullable Set<String> supportedQueryParameters() {\nreturn null;\n}",
+    "file_path": ""
+  },
+  {
+    "name": "mediaType",
+    "type": "function",
+    "content": "default MediaType mediaType() {\nreturn MediaType.APPLICATION_JSON;\n}",
+    "file_path": ""
+  },
+  {
+    "name": "Route",
+    "type": "class",
+    "content": "public static class Route {",
+    "file_path": ""
+  }
+]

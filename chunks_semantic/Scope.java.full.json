@@ -1,0 +1,6 @@
+{
+  "name": "Scope",
+  "type": "class_full",
+  "content": "/*\n * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one\n * or more contributor license agreements. Licensed under the \"Elastic License\n * 2.0\", the \"GNU Affero General Public License v3.0 only\", and the \"Server Side\n * Public License v 1\"; you may not use this file except in compliance with, at\n * your election, the \"Elastic License 2.0\", the \"GNU Affero General Public\n * License v3.0 only\", or the \"Server Side Public License, v 1\".\n */\n\npackage org.elasticsearch.rest;\n\npublic enum Scope {\n    PUBLIC, // available to all requests\n    INTERNAL // available only to requests from an operator user\n}\n",
+  "file_path": "./codebase_small/server/src/main/java/org/elasticsearch/rest/Scope.java"
+}

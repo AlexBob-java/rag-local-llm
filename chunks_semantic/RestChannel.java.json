@@ -1,0 +1,8 @@
+[
+  {
+    "name": "RestChannel",
+    "type": "class",
+    "content": "public interface RestChannel {\n\n    XContentBuilder newBuilder() throws IOException;\n\n    XContentBuilder newErrorBuilder() throws IOException;\n\n    XContentBuilder newBuilder(@Nullable XContentType xContentType, boolean useFiltering) throws IOException;\n\n    XContentBuilder newBuilder(@Nullable XContentType xContentType, @Nullable XContentType responseContentType, boolean useFiltering)\n        throws IOException;\n\n    XContentBuilder newBuilder(\n        @Nullable XContentType xContentType,\n        @Nullable XContentType responseContentType,\n        boolean useFiltering,\n        OutputStream out\n     ) throws IOException;\n\n    BytesStream bytesOutput();\n\n    void releaseOutputBuffer();\n\n    RestRequest request();\n\n    boolean detailedErrorsEnabled();\n\n    void sendResponse(RestResponse response);\n}",
+    "file_path": ""
+  }
+]

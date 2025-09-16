@@ -1,0 +1,6 @@
+{
+  "name": "ApiNotAvailableException",
+  "type": "class_full",
+  "content": "/*\n * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one\n * or more contributor license agreements. Licensed under the \"Elastic License\n * 2.0\", the \"GNU Affero General Public License v3.0 only\", and the \"Server Side\n * Public License v 1\"; you may not use this file except in compliance with, at\n * your election, the \"Elastic License 2.0\", the \"GNU Affero General Public\n * License v3.0 only\", or the \"Server Side Public License, v 1\".\n */\n\npackage org.elasticsearch.rest;\n\nimport org.elasticsearch.ElasticsearchException;\nimport org.elasticsearch.common.io.stream.StreamInput;\n\nimport java.io.IOException;\n\nimport static org.elasticsearch.rest.RestStatus.GONE;\n\n/**\n * Thrown when an API is not available in the current environment.\n */\npublic class ApiNotAvailableException extends ElasticsearchException {\n\n    public ApiNotAvailableException(String msg, Object... args) {\n        super(msg, args);\n    }\n\n    public ApiNotAvailableException(StreamInput in) throws IOException {\n        super(in);\n    }\n\n    @Override\n    public RestStatus status() {\n        return GONE;\n    }\n}\n",
+  "file_path": "./codebase_small/server/src/main/java/org/elasticsearch/rest/ApiNotAvailableException.java"
+}

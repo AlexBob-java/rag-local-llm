@@ -1,0 +1,56 @@
+[
+  {
+    "name": "BaseRestHandler",
+    "type": "class",
+    "content": "public abstract class BaseRestHandler implements RestHandler {",
+    "file_path": ""
+  },
+  {
+    "name": "MULTI_ALLOW_EXPLICIT_INDEX",
+    "type": "config",
+    "content": "public static final Setting<Boolean> MULTI_ALLOW_EXPLICIT_INDEX = Setting.boolSetting(\"rest.action.multi.allow_explicit_index\", true, Property.NodeScope);",
+    "file_path": ""
+  },
+  {
+    "name": "getUsageCount",
+    "type": "function",
+    "content": "public final long getUsageCount() {",
+    "file_path": ""
+  },
+  {
+    "name": "getName",
+    "type": "abstract function",
+    "content": "public abstract String getName();",
+    "file_path": ""
+  },
+  {
+    "name": "routes",
+    "type": "function",
+    "content": "@Override public abstract List<Route> routes();",
+    "file_path": ""
+  },
+  {
+    "name": "handleRequest",
+    "type": "function",
+    "content": "public final void handleRequest(RestRequest request, RestChannel channel, NodeClient client) throws Exception {",
+    "file_path": ""
+  },
+  {
+    "name": "prepareRequest",
+    "type": "abstract function",
+    "content": "protected abstract RestChannelConsumer prepareRequest(RestRequest request, NodeClient client) throws IOException;",
+    "file_path": ""
+  },
+  {
+    "name": "responseParams",
+    "type": "function",
+    "content": "protected Set<String> responseParams() {",
+    "file_path": ""
+  },
+  {
+    "name": "unrecognized",
+    "type": "helper function",
+    "content": "protected static String unrecognized(RestRequest request, Set<String> invalids, Set<String> candidates, String detail) {",
+    "file_path": ""
+  }
+]

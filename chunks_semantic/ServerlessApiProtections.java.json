@@ -1,0 +1,8 @@
+[
+  {
+    "name": "ServerlessApiProtections",
+    "type": "class",
+    "content": "public class ServerlessApiProtections {\n\n    private volatile boolean enabled;\n\n    public ServerlessApiProtections(boolean enabled)  {\n        this.enabled  = enabled;\n    }\n\n    public boolean isEnabled()  {\n        return enabled;\n    }\n\n    public void setEnabled(boolean enabled)  {\n        this.enabled  = enabled;\n    }\n}",
+    "file_path": ""
+  }
+]

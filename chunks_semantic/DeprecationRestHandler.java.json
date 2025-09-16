@@ -1,0 +1,44 @@
+[
+  {
+    "name": "DeprecationRestHandler",
+    "type": "class",
+    "content": "public class DeprecationRestHandler extends FilterRestHandler implements RestHandler {",
+    "file_path": ""
+  },
+  {
+    "name": "DEPRECATED_ROUTE_KEY",
+    "type": "helper",
+    "content": "public static final String DEPRECATED_ROUTE_KEY = \"deprecated_route\";",
+    "file_path": ""
+  },
+  {
+    "name": "DeprecationRestHandler",
+    "type": "class",
+    "content": "public DeprecationRestHandler(RestHandler handler, RestRequest.Method method, String path, Level deprecationLevel, String deprecationMessage, DeprecationLogger deprecationLogger, boolean compatibleVersionWarning) {",
+    "file_path": ""
+  },
+  {
+    "name": "handleRequest",
+    "type": "function",
+    "content": "@Override public void handleRequest(RestRequest request, RestChannel channel, NodeClient client) throws Exception {",
+    "file_path": ""
+  },
+  {
+    "name": "validHeaderValue",
+    "type": "function",
+    "content": "public static boolean validHeaderValue(String value) {",
+    "file_path": ""
+  },
+  {
+    "name": "requireValidHeader",
+    "type": "function",
+    "content": "public static String requireValidHeader(String value) {",
+    "file_path": ""
+  },
+  {
+    "name": "getDeprecationLevel",
+    "type": "function",
+    "content": "Level getDeprecationLevel() {",
+    "file_path": ""
+  }
+]

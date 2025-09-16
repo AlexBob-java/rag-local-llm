@@ -1,0 +1,8 @@
+[
+  {
+    "name": "ServerlessScope",
+    "type": "class",
+    "content": "package org.elasticsearch.rest;\n\nimport java.lang.annotation.*;\n\n@Retention(RetentionPolicy.RUNTIME)\n@Target(ElementType.TYPE)\npublic @interface ServerlessScope {\n    Scope value();\n}",
+    "file_path": ""
+  }
+]

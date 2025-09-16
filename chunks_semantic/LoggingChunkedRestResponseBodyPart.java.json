@@ -1,0 +1,56 @@
+[
+  {
+    "name": "LoggingChunkedRestResponseBodyPart",
+    "type": "class",
+    "content": "public class LoggingChunkedRestResponseBodyPart implements ChunkedRestResponseBodyPart {",
+    "file_path": ""
+  },
+  {
+    "name": "inner",
+    "type": "field",
+    "content": "private final ChunkedRestResponseBodyPart inner;",
+    "file_path": ""
+  },
+  {
+    "name": "loggerStream",
+    "type": "field",
+    "content": "private final OutputStream loggerStream;",
+    "file_path": ""
+  },
+  {
+    "name": "LoggingChunkedRestResponseBodyPart",
+    "type": "constructor",
+    "content": "public LoggingChunkedRestResponseBodyPart(ChunkedRestResponseBodyPart inner, OutputStream loggerStream) {",
+    "file_path": ""
+  },
+  {
+    "name": "isPartComplete",
+    "type": "method",
+    "content": "@Override public boolean isPartComplete() {",
+    "file_path": ""
+  },
+  {
+    "name": "isLastPart",
+    "type": "method",
+    "content": "@Override public boolean isLastPart() {",
+    "file_path": ""
+  },
+  {
+    "name": "getNextPart",
+    "type": "method",
+    "content": "@Override public void getNextPart(ActionListener<ChunkedRestResponseBodyPart> listener) {",
+    "file_path": ""
+  },
+  {
+    "name": "encodeChunk",
+    "type": "method",
+    "content": "@Override public ReleasableBytesReference encodeChunk(int sizeHint, Recycler<BytesRef> recycler) throws IOException {",
+    "file_path": ""
+  },
+  {
+    "name": "getResponseContentTypeString",
+    "type": "method",
+    "content": "@Override public String getResponseContentTypeString() {",
+    "file_path": ""
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "name": "FilterRestHandler",
+    "type": "class",
+    "content": "public abstract class FilterRestHandler implements RestHandler {",
+    "file_path": ""
+  },
+  {
+    "name": "FilterRestHandler",
+    "type": "class",
+    "content": "private final RestHandler delegate;",
+    "file_path": ""
+  },
+  {
+    "name": "FilterRestHandler",
+    "type": "class",
+    "content": "protected FilterRestHandler(RestHandler delegate) {",
+    "file_path": ""
+  },
+  {
+    "name": "getDelegate",
+    "type": "function",
+    "content": "public RestHandler getDelegate() {",
+    "file_path": ""
+  },
+  {
+    "name": "FilterRestHandler",
+    "type": "class",
+    "content": "protected RestHandler getDelegate() {",
+    "file_path": ""
+  },
+  {
+    "name": "getConcreteRestHandler",
+    "type": "function",
+    "content": "@Override\n    public RestHandler getConcreteRestHandler() {",
+    "file_path": ""
+  },
+  {
+    "name": "routes",
+    "type": "function",
+    "content": "@Override\n    public List<RestHandler.Route> routes() {",
+    "file_path": ""
+  },
+  {
+    "name": "allowSystemIndexAccessByDefault",
+    "type": "function",
+    "content": "@Override\n    public boolean allowSystemIndexAccessByDefault() {",
+    "file_path": ""
+  },
+  {
+    "name": "canTripCircuitBreaker",
+    "type": "function",
+    "content": "@Override\n    public boolean canTripCircuitBreaker() {",
+    "file_path": ""
+  },
+  {
+    "name": "supportsBulkContent",
+    "type": "function",
+    "content": "@Override\n    public boolean supportsBulkContent() {",
+    "file_path": ""
+  },
+  {
+    "name": "mediaTypesValid",
+    "type": "function",
+    "content": "@Override\n    public boolean mediaTypesValid(RestRequest request) {",
+    "file_path": ""
+  }
+]

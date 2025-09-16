@@ -1,0 +1,32 @@
+[
+  {
+    "name": "RestHeaderDefinition",
+    "type": "class",
+    "content": "public final class RestHeaderDefinition {\n    private final String name;\n    /**\n      * This should be set to true only when the syntax of the value of the Header to copy is defined as a comma separated list of String\n      * values.\n      */\n    private final boolean multiValueAllowed;\n\n    public RestHeaderDefinition(String name, boolean multiValueAllowed) {\n        this.name = name;\n        this.multiValueAllowed = multiValueAllowed;\n     }\n\n    public String getName() {\n        return name;\n     }\n\n    public boolean isMultiValueAllowed() {\n        return multiValueAllowed;\n     }}",
+    "file_path": ""
+  },
+  {
+    "name": "RestHeaderDefinition",
+    "type": "helper",
+    "content": "public final class RestHeaderDefinition {\n    private final String name;\n    /**\n      * This should be set to true only when the syntax of the value of the Header to copy is defined as a comma separated list of String\n      * values.\n      */\n    private final boolean multiValueAllowed;\n\n    public RestHeaderDefinition(String name, boolean multiValueAllowed) {\n        this.name = name;\n        this.multiValueAllowed = multiValueAllowed;\n     }\n\n    public String getName() {\n        return name;\n     }\n\n    public boolean isMultiValueAllowed() {\n        return multiValueAllowed;\n     }}",
+    "file_path": ""
+  },
+  {
+    "name": "RestHeaderDefinition",
+    "type": "model",
+    "content": "public final class RestHeaderDefinition {\n    private final String name;\n    /**\n      * This should be set to true only when the syntax of the value of the Header to copy is defined as a comma separated list of String\n      * values.\n      */\n    private final boolean multiValueAllowed;\n\n    public RestHeaderDefinition(String name, boolean multiValueAllowed) {\n        this.name = name;\n        this.multiValueAllowed = multiValueAllowed;\n     }\n\n    public String getName() {\n        return name;\n     }\n\n    public boolean isMultiValueAllowed() {\n        return multiValueAllowed;\n     }}",
+    "file_path": ""
+  },
+  {
+    "name": "RestHeaderDefinition",
+    "type": "config",
+    "content": "public final class RestHeaderDefinition {\n    private final String name;\n    /**\n      * This should be set to true only when the syntax of the value of the Header to copy is defined as a comma separated list of String\n      * values.\n      */\n    private final boolean multiValueAllowed;\n\n    public RestHeaderDefinition(String name, boolean multiValueAllowed) {\n        this.name = name;\n        this.multiValueAllowed = multiValueAllowed;\n     }\n\n    public String getName() {\n        return name;\n     }\n\n    public boolean isMultiValueAllowed() {\n        return multiValueAllowed;\n     }}",
+    "file_path": ""
+  },
+  {
+    "name": "RestHeaderDefinition",
+    "type": "test",
+    "content": "public final class RestHeaderDefinition {\n    private final String name;\n    /**\n      * This should be set to true only when the syntax of the value of the Header to copy is defined as a comma separated list of String\n      * values.\n      */\n    private final boolean multiValueAllowed;\n\n    public RestHeaderDefinition(String name, boolean multiValueAllowed) {\n        this.name = name;\n        this.multiValueAllowed = multiValueAllowed;\n     }\n\n    public String getName() {\n        return name;\n     }\n\n    public boolean isMultiValueAllowed() {\n        return multiValueAllowed;\n     }}",
+    "file_path": ""
+  }
+]

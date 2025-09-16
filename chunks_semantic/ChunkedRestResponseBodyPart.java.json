@@ -1,0 +1,14 @@
+[
+  {
+    "name": "ChunkedRestResponseBodyPart",
+    "type": "interface",
+    "content": "public interface ChunkedRestResponseBodyPart {\n\n    boolean isPartComplete();\n\n    boolean isLastPart();\n\n    void getNextPart(ActionListener<ChunkedRestResponseBodyPart> listener);\n\n    ReleasableBytesReference encodeChunk(int sizeHint, Recycler<BytesRef> recycler) throws IOException;\n\n    String getResponseContentTypeString();\n\n    static ChunkedRestResponseBodyPart fromXContent(ChunkedToXContent chunkedToXContent, ToXContent.Params params, RestChannel channel)\n        throws IOException ;\n\n    static ChunkedRestResponseBodyPart fromTextChunks(String contentType, Iterator<CheckedConsumer<Writer, IOException>> chunkIterator);\n}",
+    "file_path": ""
+  },
+  {
+    "name": "Logger",
+    "type": "helper",
+    "content": "Logger logger = LogManager.getLogger(ChunkedRestResponseBodyPart.class);",
+    "file_path": ""
+  }
+]
