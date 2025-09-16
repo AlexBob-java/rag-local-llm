@@ -1,4 +1,4 @@
-# build_rag_semantic8.py
+# build_rag.py
 import os
 import glob
 import json
@@ -10,7 +10,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.docstore.document import Document
 
-# Параметры
+# Parameters
 CODEBASE_DIR = "./codebase_small"
 OUTPUT_DIR = "./faiss_index_semantic"
 CHUNKS_DIR = "./chunks_semantic"
@@ -20,14 +20,14 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 print(f"Using device: {device}")
 
-# Инициализация эмбеддера
+# Initialize embeddings
 embeddings = HuggingFaceEmbeddings(
     model_name=EMBEDDINGS_MODEL_NAME,
     model_kwargs={"device": device},
     encode_kwargs={"device": device, "batch_size": 32},
 )
 
-# Инициализация LLM
+# Initialize LLM
 llm = OllamaLLM(
     model=LLM_MODEL_NAME,
     temperature=0.0,
@@ -118,7 +118,7 @@ File content:
             "file_path": file_path.replace("\\", "/")
         }]
 
-    # Санитайзим каждый чанк
+    # Sanitize each chunk
     return [sanitize_chunk(c) for c in chunks]
 
 # ================== FULL CLASS ==================
@@ -149,17 +149,17 @@ def build_documents():
     print(f"Found {len(files)} files.")
 
     for file_path in tqdm(files, desc="Processing files"):
-        # Семантические чанки
+        # Semantic chunks
         sem_path = make_chunk_path(file_path)
         sem_chunks = load_json_if_exist(sem_path)
         if sem_chunks is None:
             sem_chunks = semantic_split(file_path)
             save_json_or_txt(sem_path, sem_chunks)
 
-        # Полные чанки
+        # Full class chunks
         full_chunks = extract_full_class_chunk(file_path)
 
-        # Объединяем
+        # Merge
         all_chunks = (sem_chunks or []) + full_chunks
 
         for chunk in all_chunks:
