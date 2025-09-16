@@ -1,6 +1,5 @@
-# web_rag2.py
-# Веб-интерфейс для RAG с FAISS и Ollama
-# Запуск: python web_rag2.py
+# web_rag.py
+# Web interface for RAG with FAISS and Ollama
 
 import os
 import torch
@@ -12,7 +11,7 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 
 # ==========================
-# Конфигурация
+# Configuration
 # ==========================
 INDEX_DIR = "./faiss_index_semantic"
 DEFAULT_LLM = "llama3.1:8b"
@@ -22,12 +21,12 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print(f"Using device: {device}")
 
 # ==========================
-# Загрузка эмбеддера
+# Load embeddings
 # ==========================
 embeddings = HuggingFaceEmbeddings(model_name="BAAI/bge-large-en-v1.5")
 
 # ==========================
-# Загрузка индекса FAISS
+# Load FAISS index
 # ==========================
 def load_rag_index():
     if not os.path.exists(INDEX_DIR):
@@ -43,7 +42,7 @@ def load_rag_index():
 vectorstore = load_rag_index()
 
 # ==========================
-# Создание RAG-чейна
+# Create RAG chain
 # ==========================
 def create_rag_chain(model_name: str):
     llm = OllamaLLM(
@@ -81,7 +80,7 @@ Answer (concise, code-focused):"""
     return qa_chain
 
 # ==========================
-# Обработка сообщений
+# Message handling
 # ==========================
 def chat_fn(message, chat_history, model_name):
     qa_chain = create_rag_chain(model_name)
@@ -89,7 +88,7 @@ def chat_fn(message, chat_history, model_name):
     answer = result["result"] if isinstance(result, dict) else str(result)
 
     chat_history = chat_history or []
-    # Добавляем в формате [user_msg, assistant_msg] для Chatbot
+    # Append in format [user_msg, assistant_msg] for Chatbot
     chat_history.append([message, answer])
 
     return chat_history, chat_history
@@ -99,7 +98,7 @@ def respond(message, chat_history, model_name):
     return "", chat_history
 
 # ==========================
-# Интерфейс Gradio
+# Gradio Interface
 # ==========================
 def build_interface():
     with gr.Blocks(title="RAG Chat") as demo:
@@ -111,17 +110,17 @@ def build_interface():
                 value=DEFAULT_LLM,
                 label="Select Model"
             )
-            clear_btn = gr.Button("🧹 Очистить историю")
+            clear_btn = gr.Button("🧹 Clear History")
 
         chatbot = gr.Chatbot(height=500)
 
         msg = gr.Textbox(
-            placeholder="Введите вопрос о коде...",
-            label="Ваш запрос"
+            placeholder="Enter your code-related question...",
+            label="Your Query"
         )
-        send_btn = gr.Button("Отправить")
+        send_btn = gr.Button("Send")
 
-        state = gr.State([])  # хранит историю
+        state = gr.State([])  # stores history
 
         send_btn.click(
             respond,
