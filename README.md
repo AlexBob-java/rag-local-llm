@@ -102,7 +102,8 @@ This project demonstrates a **RAG (Retrieval-Augmented Generation)** pipeline wi
    ```
 
 ## 2. Install Ollama
-1. Download and install Ollama: https://ollama.ai
+1. Download and install Ollama:
+   <https://ollama.ai>
 
 macOS:
    ```bash
@@ -154,5 +155,5 @@ Run the Gradio chatbot interface:
    ```bash
    python web_rag_run.py
    ```
-Then open http://localhost:7860
+Then open <http://localhost:7860>
  in your browser and start asking questions about your codebase 🎉
