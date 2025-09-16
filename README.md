@@ -35,20 +35,25 @@ The project had 3 goals:
 ---
 
 ## 🧩 How It Works  
-1. **Chunking**  
-   - Split the codebase into small chunks.  
-   - Try JSON format first.  
-   - If JSON is invalid → fallback to plain text.  
-   - Both are stored in FAISS.  
 
-2. **Embedding & Indexing**  
-   - Each chunk is embedded with `bge-large-en`.  
-   - Stored in FAISS for fast retrieval.  
+1. **Chunking (DeepSeek-Coder 6.7B via Ollama)**  
+   - Source files (`.java`, `.kt`) are passed to **DeepSeek-Coder 6.7B**.  
+   - LLM analyzes the file and splits it into semantic parts (functions, classes, endpoints, helpers, tests).  
+   - Each part is returned as JSON with fields:  
+     - `name`: semantic unit (class/method/etc.)  
+     - `type`: function, class, endpoint, config, test, etc.  
+     - `content`: code snippet  
+   - If JSON is invalid → fallback to plain text chunk.  
+   - Both semantic chunks and full-class chunks are saved.  
 
-3. **Query Flow**  
+2. **Embedding & Indexing (BAAI/bge-large-en-v1.5)**  
+   - Each chunk (semantic + full-class) is embedded using `BAAI/bge-large-en-v1.5`.  
+   - Embeddings are stored in **FAISS** for efficient vector search.  
+
+3. **Query Flow (DeepSeek-Coder 6.7B again)**  
    - User asks a question in the chat.  
-   - Retriever pulls top-k relevant code snippets.  
-   - LLM combines them with a custom prompt → produces an answer.  
+   - **Retriever** finds top-k relevant chunks and their metadata.  
+   - **DeepSeek-Coder 6.7B** takes these chunks, applies a custom prompt, and generates a natural language answer.  
 
 4. **UI**  
    - Clean chat interface with history.  
