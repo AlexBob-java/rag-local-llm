@@ -93,11 +93,13 @@ This project demonstrates a **RAG (Retrieval-Augmented Generation)** pipeline wi
 1. Make sure you have **Python 3.10+** installed:
    ```bash
    python3 --version
+   ```
 2. Create a virtual environment:
    ```bash
    python3 -m venv rag_env
    source rag_env/bin/activate   # Linux / macOS
    rag_env\Scripts\activate      # Windows
+   ```
 
 ## 2. Install Ollama
 1. Download and install Ollama: https://ollama.ai
