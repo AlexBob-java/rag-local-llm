@@ -28,7 +28,9 @@ The project had 3 goals:
 - **Embeddings**: `BAAI/bge-large-en-v1.5` (HuggingFace).  
 - **LLM**: Ollama with `llama3.1:8b` (runs locally).  
 - **Framework**: LangChain.  
-- **UI**: Gradio web app (chat interface).  
+- **UI**: Gradio web app (chat interface).
+- **OS** Win11
+- **Hardware** Laptop with Nvidia RTX 2060 6Gb, AMD Ryzen 7 4800HS, RAM 24Gb.
 
 ---
 
