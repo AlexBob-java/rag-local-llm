@@ -168,6 +168,6 @@ Then open <http://localhost:7860>
 
 ## 6. Demo
 I took a small amount of code from ElasticSearch [Git](https://github.com/elastic/elasticsearch/tree/main/server/src/main/java/org/elasticsearch/rest)
-and built a RAG. So here is how it works:
+and built a RAG. On the demo, I'm asking LLM about a class that exists in the RAG, to be sure that LLM is aware of it. So here is how it works:
 
 ![Demo](/demo.gif)
