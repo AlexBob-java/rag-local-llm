@@ -170,4 +170,4 @@ Then open <http://localhost:7860>
 I took a small amount of code from ElasticSearch [Git](https://github.com/elastic/elasticsearch/tree/main/server/src/main/java/org/elasticsearch/rest)
 and built a RAG. So here is how it works:
 
-![Demo](/Demo.gif)
+![Demo](/demo.gif)
