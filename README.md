@@ -133,6 +133,7 @@ Inside the virtual environment, install the required packages:
    pip install langchain langchain-community langchain-huggingface langchain-ollama
    pip install faiss-cpu
    pip install json5 tqdm
+   pip install sentence-transformers
    ```
 👉 If you have a GPU, install the CUDA version of PyTorch instead:
    ```bash
