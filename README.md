@@ -126,18 +126,21 @@ Pull the required models:
    ollama pull llama3.1:8b
    ```
 ## 3. Install Python Dependencies
-Inside the virtual environment, install the required packages:
+Inside the virtual environment, install the required packages.<br>
+If you have a GPU, install the CUDA version of PyTorch:
+   ```bash
+   pip install torch --index-url https://download.pytorch.org/whl/cu126
+   ```
+Or CPU version:
    ```bash
    pip install torch --extra-index-url https://download.pytorch.org/whl/cpu
+   ```
+   ```bash
    pip install gradio
    pip install langchain langchain-community langchain-huggingface langchain-ollama
    pip install faiss-cpu
    pip install json5 tqdm
    pip install sentence-transformers
-   ```
-👉 If you have a GPU, install the CUDA version of PyTorch instead:
-   ```bash
-   pip install torch --index-url https://download.pytorch.org/whl/cu126
    ```
 ## 4. Prepare Your Codebase
 Place your `Java/Kotlin` files into a folder, for example:
