@@ -92,7 +92,7 @@ This project demonstrates a **RAG (Retrieval-Augmented Generation)** pipeline wi
 ## 1. Install Python and Virtual Environment
 1. Make sure you have **Python 3.10+** installed:
    ```bash
-   python3 --version
+   python3 --version or python --version
    ```
 2. Create a virtual environment:
    ```bash
