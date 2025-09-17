@@ -92,11 +92,15 @@ This project demonstrates a **RAG (Retrieval-Augmented Generation)** pipeline wi
 ## 1. Install Python and Virtual Environment
 1. Make sure you have **Python 3.10+** installed:
    ```bash
-   python3 --version or python --version
+   python3 --version
    ```
-2. Create a virtual environment:
+   or
    ```bash
-   python3 -m venv rag_env
+   python --version
+   ```
+3. Create a virtual environment:
+   ```bash
+   python -m venv rag_env
    source rag_env/bin/activate   # Linux / macOS
    rag_env\Scripts\activate      # Windows
    ```
