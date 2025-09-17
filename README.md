@@ -169,3 +169,4 @@ Then open <http://localhost:7860>
 ## 6. Demo
 I took a small amount of code from ElasticSearch Git: https://github.com/elastic/elasticsearch/tree/main/server/src/main/java/org/elasticsearch/rest
 and built a RAG. So here is how it works:
+<img src="[assets/demo.gif](https://github.com/AlexBob-java/rag-local-llm/blob/main/Demo.gif)" width="1000" alt="Demo"/>
