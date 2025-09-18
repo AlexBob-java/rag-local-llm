@@ -17,7 +17,7 @@ So I decided to create a **pet project**: a Retrieval-Augmented Generation (RAG)
 
 ## 🛠️ The Idea  
 The project had 3 goals:  
-1. **Index my codebase** (Java, Kotlin, YAML).  
+1. **Index my codebase** (Java, Kotlin).  
 2. **Ask natural-language questions** about the code.  
 3. **Generate unit/integration tests** based on retrieved snippets.  
 
