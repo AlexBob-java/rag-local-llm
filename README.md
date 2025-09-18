@@ -1,5 +1,6 @@
 # 🧑‍💻 From Corporate Codebases to My Pet Project: Building RAG for Code with LLMs  
-
+ 
+ [Link to the project](https://github.com/AlexBob-java/rag-local-llm/tree/main)
 ## 🔎 Background  
 When working with large codebases, I noticed a big limitation of LLMs (ChatGPT, Claude, LLaMA, etc.):  
 They can explain **general programming concepts**, but they **don’t know your specific codebase**.  
@@ -163,8 +164,7 @@ Run the Gradio chatbot interface:
    ```bash
    python web_rag_run.py
    ```
-Then open <http://localhost:7860>
- in your browser and start asking questions about your codebase 🎉
+Then open <http://localhost:7860> in your browser and start asking questions about your codebase 🎉
 
 ## 6. Demo
 I took a small amount of code from ElasticSearch [Git](https://github.com/elastic/elasticsearch/tree/main/server/src/main/java/org/elasticsearch/rest)
